@@ -23,6 +23,12 @@ class Futbolista(Persona, Deportista):
         return self._piernaHabil
     def setPiernaHabil(self, piernaHabil):
         self._piernaHabil=piernaHabil
+    @classmethod
+    def getListaFutbolistas(cls):
+        return cls._listaFutbolistas  
+    @classmethod
+    def setListaFutbolistas(cls, listaFutbolistas):
+        cls._listaFutbolistas=listaFutbolistas
 
     def __str__(self):
         return "Mi nombre es "+Persona.nombre+" soy profesional en el deporte "+Deportista.deporte+" Tengo "+Persona.edad+" años de edad y llevo "+Deportista.añosParticipando+" años en el deporte"
